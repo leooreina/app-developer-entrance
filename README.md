@@ -1,68 +1,73 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# App Developer Entrance Project
 
-## Available Scripts
+Create a client-side quiz app based on the provided requirements, data and views.
 
-In the project directory, you can run:
 
-### `yarn start`
+## Requirements
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- clone this repo as a starter
+- use only HTML/CSS/JS
+- use any frameworks or libraries of your choice (ex: JQuery, React, Bootstrap)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Quiz Data
 
-### `yarn test`
+Quiz data can be found in [src/quiz.json](./src/quiz.json). This content will be loaded when a user starts a quiz.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For every question there is one correct answer (with a value of `true`) and three incorrect answers with a value of `false`. The `content` field contains a possible answer.
 
-### `yarn build`
+```js
+{
+  quizzes: [{
+    title: 'Quiz 1',
+    questions: [{
+      question: 'Question 1?'
+      answers: [{
+        content: 'Answer 1.',
+        value: false // wrong answer
+      }, {
+        content: 'Answer 2.',
+        value: true // correct answer
+      }]
+    }]
+  }]
+}
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Views
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Feel free to be creative and style your views. As a bare minimum, please create the following three views:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### 01 - Welcome Screen
 
-### `yarn eject`
+![01 - Welcome View](./diagrams/quiz-01.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The view presented when the user starts the app.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- load either quiz 1 or quiz 2 on click
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+##### 02 - Quiz View
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![02 - Quiz View](./diagrams/quiz-02.png)
 
-## Learn More
+While the user is selecting their answers:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- display all 3 questions with possible answers
+- provide feedback when a user clicks on an answer. Consider styling correct or wrong answers with green or red button colors
+- show the next question after a time delay of 2 seconds
+- track the number of correct answers in the top right corner
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##### 03 - Completion View
 
-### Code Splitting
+![03 - Completion View](./diagrams/quiz-03.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+When the user has finished answering all three questions:
 
-### Analyzing the Bundle Size
+- display the final score
+- show a "pass" message if more than 50% of the answers were correct, show a "fail" message otherwise
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Upon Project Completion
 
-### Making a Progressive Web App
+- push your finished app to Github
+- provide your username and repo to an instructor
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Good luck!
