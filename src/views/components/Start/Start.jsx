@@ -33,9 +33,9 @@ export default class Start extends Component {
         {data
           ? data.map(item =>
               item.default.quizzes.map((quiz, index) => (
-                <div className="my-4 text-center" key={quiz.title}>
+                <div className="my-4 text-center" key={index}>
                   <Link to={() => chooseQuiz(quiz.title)}>
-                    <div className="btn-info border-0 rounded" key={quiz.title}>
+                    <div className="btn-info border-0 rounded" key={index}>
                       <h2>{quiz.title}</h2>
                     </div>
                   </Link>
