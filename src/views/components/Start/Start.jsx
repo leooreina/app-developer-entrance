@@ -30,14 +30,20 @@ export default class Start extends Component {
     let { data } = this.state;
     return (
       <div>
-        <h1 className="start text-center mt-5">START</h1>
+        <h1 className="start text-center mt-5" key="start">START</h1>
         {data
           ? data.map(item =>
               item.default.quizzes.map((quiz, index) => (
                 <div className="my-4 text-center" key={index}>
-                  <Link to={() => chooseQuiz(quiz.title)} style={{textDecoration: 'none'}}>
+                  <Link 
+                    to={() => chooseQuiz(quiz.title)} 
+                    style={{textDecoration: 'none'}}
+                    key="link"  
+                  >
                     <div className="buttons my-5 py-4 border-0" key={index}>
-                      <h2>{quiz.title}</h2>
+                      <h2 key="quiz-title">
+                        {quiz.title}
+                      </h2>
                     </div>
                   </Link>
                 </div>

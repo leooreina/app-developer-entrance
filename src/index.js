@@ -6,14 +6,14 @@ import { HashRouter, Route } from "react-router-dom";
 import { home, linkQuizAbstract, linkQuizDev } from "./utils/utils";
 
 const Child = ({ match }) => {
-  return <Quiz match={match} />;
+  return <Quiz match={match} key={match}/>;
 };
 
 ReactDOM.render(
   <HashRouter>
-    <Route exact path={home} component={Start} />
-    <Route exact path={linkQuizDev} component={Child} />
-    <Route exact path={linkQuizAbstract} component={Child} />
+    <Route exact path={home} component={Start} key={home}/>
+    <Route exact path={linkQuizDev} component={Child} key={linkQuizDev}/>
+    <Route exact path={linkQuizAbstract} component={Child} key={linkQuizAbstract}/>
   </HashRouter>,
   document.getElementById("root")
 );

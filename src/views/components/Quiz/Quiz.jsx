@@ -49,8 +49,10 @@ export class Quiz extends Component {
           ? choosenQuiz.map(quiz =>
               quiz.map(properties => (
                 <div>
-                  <h2 className="text-center title">{properties.title}</h2>
-                  <Questions properties={properties} />
+                  <h2 className="text-center title" key="title-property">
+                    {properties.title}
+                  </h2>
+                  <Questions key="questions" properties={properties} />
                 </div>
               ))
             )

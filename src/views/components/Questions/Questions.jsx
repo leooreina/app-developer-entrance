@@ -50,10 +50,19 @@ export class Questions extends Component {
     if (questionNumber === (index + 1)) {
       return (
         <div className="text-center">
-          <div className="score my-4 font-weight-bold" >Score: {this.state.score}</div>
-          <h4><span className="font-weight-bold">{questionNumber}.</span> {questionObject.question}</h4>
-          <h5 id="feedback">{this.state.feedback}</h5>
-          <div ref="question" className="grid grid-template-columns">
+          <div className="score my-4 font-weight-bold" key="score">
+            Score: {this.state.score}
+          </div>
+          <h4 key="question-title">
+            <span className="font-weight-bold" key="question-number">
+              {questionNumber}.
+            </span> 
+            {questionObject.question}
+          </h4>
+          <h5 key="feedback" id="feedback">
+            {this.state.feedback}
+          </h5>
+          <div key="questions" className="grid grid-template-columns">
             {
               questionObject.answers.map((answer, index) => (
                 <button 
