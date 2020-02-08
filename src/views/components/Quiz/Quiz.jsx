@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { loadingData } from "../../../../utils/utils.js";
-import { Questions } from "../../Questions/Questions.jsx";
+import { loadingData } from "../../../utils/utils.js";
+import { Questions } from "../Questions/Questions.jsx";
 
 export class Quiz extends Component {
   constructor(props) {
