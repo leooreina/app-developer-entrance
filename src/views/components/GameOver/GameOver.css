@@ -13,3 +13,13 @@
   border-radius: 30px;
   margin: 20px 33% 0 33%;
 }
+
+.fail {
+  color: red;
+  font-weight: bold;
+}
+
+.pass {
+  color: #58b368;
+  font-weight: bold;
+}
