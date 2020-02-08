@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { loadingData } from "../../../utils/utils.js";
 import { Questions } from "../Questions/Questions.jsx";
+import '../Quiz/Quiz.css';
 
 export class Quiz extends Component {
   constructor(props) {
@@ -48,7 +49,7 @@ export class Quiz extends Component {
           ? choosenQuiz.map(quiz =>
               quiz.map(properties => (
                 <div>
-                  <h2>{properties.title}</h2>
+                  <h2 className="text-center title">{properties.title}</h2>
                   <Questions properties={properties} />
                 </div>
               ))

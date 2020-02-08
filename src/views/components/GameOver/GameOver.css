@@ -1,0 +1,15 @@
+.game-over {
+  color: #454d66;
+}
+
+.final-score {
+  font-size: 30px;
+}
+
+.right-questions-number {
+  font-size: 26px;
+  background-color: #309975;
+  color: #efeeb4;
+  border-radius: 30px;
+  margin: 20px 33% 0 33%;
+}
