@@ -1,0 +1,19 @@
+body {
+  font-family: 'Indie Flower', cursive;
+  background-color: #efeeb4;
+}
+
+.start {
+  color: #309975;
+}
+
+.buttons {
+  background-color: #454d66;
+  color: #dad873;
+  margin: 0 33% 0 33%;
+  border-radius: 40px;
+}
+
+.buttons:hover {
+  background-color: #309975;
+}

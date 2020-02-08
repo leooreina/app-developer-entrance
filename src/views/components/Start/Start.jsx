@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "../Start/Start.css"
 import {
   linkQuizDev,
   linkQuizAbstract,
@@ -29,13 +30,13 @@ export default class Start extends Component {
     let { data } = this.state;
     return (
       <div>
-        <h1 className="text-center mt-5">Start</h1>
+        <h1 className="start text-center mt-5">START</h1>
         {data
           ? data.map(item =>
               item.default.quizzes.map((quiz, index) => (
                 <div className="my-4 text-center" key={index}>
-                  <Link to={() => chooseQuiz(quiz.title)}>
-                    <div className="btn-info border-0 rounded" key={index}>
+                  <Link to={() => chooseQuiz(quiz.title)} style={{textDecoration: 'none'}}>
+                    <div className="buttons my-5 py-4 border-0" key={index}>
                       <h2>{quiz.title}</h2>
                     </div>
                   </Link>
